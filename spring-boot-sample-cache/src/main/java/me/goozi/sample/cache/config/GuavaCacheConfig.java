@@ -51,7 +51,7 @@ public class GuavaCacheConfig implements CachingConfigurer {
     public static final String CACHE_TWO = "cacheTwo";
 
 
-    @Bean
+    @Bean       //very important!!!
     @Override
     public CacheManager cacheManager() {
         logger.info("initializing simple guava cache manage.");
