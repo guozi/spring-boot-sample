@@ -9,6 +9,7 @@
 	<modules>
 		<module>spring-boot-sample-cache</module>
 		<module>spring-boot-sample-scheduled</module>
+		<module>spring-boot-sample-event</module>
 	</modules>
 	<packaging>pom</packaging>
 
