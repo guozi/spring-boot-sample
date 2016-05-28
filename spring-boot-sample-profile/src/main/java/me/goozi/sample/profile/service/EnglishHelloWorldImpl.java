@@ -14,24 +14,29 @@
  * limitations under the License.
  */
 
-package me.goozi.sample.scheduled.config;
+package me.goozi.sample.profile.service;
 
-import me.goozi.sample.scheduled.service.ScheduledService;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import me.goozi.sample.profile.config.UserConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 /**
  * @author goozi
- * @create 2016-05-13 22:44
+ * @create 2016-05-27 23:00
  * @since 1.0.0
  */
-@Configuration
-@EnableScheduling
-public class ScheduledConfig {
+@Service
+@Profile("english")
+public class EnglishHelloWorldImpl implements HelloWorldService {
 
-    @Bean
-    public ScheduledService scheduledService() {
-        return new ScheduledService();
+    @Autowired
+    UserConfig userConfig;
+
+    @Override
+    public String sayHelloWorld() {
+        System.out.println(userConfig.getRemark());
+        System.out.println(userConfig.getAddress());
+        return userConfig.getName() + " Hello World!";
     }
 }

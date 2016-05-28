@@ -19,14 +19,12 @@ package me.goozi.sample.scheduled.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 
 /**
  * @author goozi
  * @create 2016-05-13 22:49
  * @since 1.0.0
  */
-@Component
 public class ScheduledService {
     private final Logger logger = LoggerFactory.getLogger(ScheduledService.class);
 
